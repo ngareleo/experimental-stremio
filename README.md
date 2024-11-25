@@ -1,1 +1,1 @@
-# experimental-stremio
+# Exprimental stremio
