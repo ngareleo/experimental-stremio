@@ -39,11 +39,6 @@ public class VideoController : ControllerBase
     {
         _context.Videos.Add(video);
         await _context.SaveChangesAsync();
-
-        return CreatedAtAction(
-            nameof(GetVideo),
-            new { Id = video.Id, UrlLocation = video.UrlLocation },
-            video
-        );
+        return CreatedAtAction(nameof(GetVideo), new { video.Id, video.UrlLocation }, video);
     }
 }
